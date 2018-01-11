@@ -54,6 +54,10 @@ There are a few things required in the Info.plist file to get the location servi
 * UIBackgroundModes - **location**
 * UIRequiredDeviceCapabilities - armv7, **location-services** (NOTE:  **gps** was not necessary...)
 
+## Bugs
+
+I could not figure out a way to consistently clear the App Icon Badge when the app terminates.  If the app was in the foreground it often does work, but if the app is in the background, it very rarely works.  I posted a question on StackOverflow.com and the response was that it's not possible.  I tried several different approaches.  The appWillTerminate functionality does not seem to allow you to set the appIconBadge variable to 0 (zero) before the app terminates.  You can try, but it does not work.
+
 ## Author
 
 * [ByteSlinger](https://github.com/ByteSlinger)
