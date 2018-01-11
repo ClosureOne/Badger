@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SPE-tu-QPs">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Badger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lFE-st-dIP">
+                                <rect key="frame" x="136" y="192" width="51" height="31"/>
+                                <connections>
+                                    <action selector="enableBadgeUpdate:" destination="BYZ-38-t0r" eventType="valueChanged" id="BH2-Tv-Gqe"/>
+                                </connections>
+                            </switch>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="844-Yb-zVY" userLabel="Divider">
+                                <rect key="frame" x="16" y="239" width="288" height="2"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="BiL-Z5-vMn"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OsI-uW-Hhe">
+                                <rect key="frame" x="96" y="273" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="8qE-K3-fN8"/>
+                                    <constraint firstAttribute="width" constant="128" id="cIJ-8I-wrK"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="none" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tVi-fg-aFG" userLabel="Badge Value">
+                                <rect key="frame" x="223" y="257" width="17" height="39"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Update badge when app is in the background" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71b-Ju-Kv0" userLabel="Badge Label">
+                                <rect key="frame" x="32" y="83" width="256" height="101"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lFE-st-dIP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0DH-XL-jfi"/>
+                            <constraint firstItem="tVi-fg-aFG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OsI-uW-Hhe" secondAttribute="leading" id="0Gq-AT-xpd"/>
+                            <constraint firstItem="844-Yb-zVY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6c6-IJ-sNy"/>
+                            <constraint firstItem="tVi-fg-aFG" firstAttribute="top" secondItem="OsI-uW-Hhe" secondAttribute="top" constant="-16" id="9hn-NY-H6o"/>
+                            <constraint firstItem="OsI-uW-Hhe" firstAttribute="top" secondItem="844-Yb-zVY" secondAttribute="bottom" constant="32" id="AJk-ZB-gOP"/>
+                            <constraint firstItem="OsI-uW-Hhe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UvF-ub-2ov"/>
+                            <constraint firstItem="844-Yb-zVY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YpZ-dq-RTt"/>
+                            <constraint firstItem="71b-Ju-Kv0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="akk-YK-qWd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="844-Yb-zVY" secondAttribute="trailing" id="hWO-1R-llL"/>
+                            <constraint firstItem="844-Yb-zVY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oa8-62-J8I"/>
+                            <constraint firstItem="tVi-fg-aFG" firstAttribute="trailing" secondItem="OsI-uW-Hhe" secondAttribute="trailing" constant="16" id="tIR-sz-COv"/>
+                            <constraint firstItem="844-Yb-zVY" firstAttribute="top" secondItem="lFE-st-dIP" secondAttribute="bottom" constant="16" id="taw-TJ-3R8"/>
+                            <constraint firstItem="lFE-st-dIP" firstAttribute="top" secondItem="71b-Ju-Kv0" secondAttribute="bottom" constant="8" id="u7X-hj-44M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="71b-Ju-Kv0" secondAttribute="trailing" constant="16" id="vHh-9Q-EB1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tKS-iN-wlp"/>
+                    <connections>
+                        <outlet property="appIconImage" destination="OsI-uW-Hhe" id="Vvf-vD-BQv"/>
+                        <outlet property="badgeValue" destination="tVi-fg-aFG" id="WwL-Ab-tmU"/>
+                        <outlet property="enableSwitch" destination="lFE-st-dIP" id="YOk-ui-vw2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="474.375" y="132.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8wd-DO-lP1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SPE-tu-QPs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tiR-LY-3AK">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="AiV-Sm-rcJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VHH-pI-0lA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-313" y="59"/>
+        </scene>
+    </scenes>
+</document>
